@@ -1,0 +1,40 @@
+<p>post works!</p>
+<p>post works!</p>
+
+<div>
+    <label for="">Name:&nbsp;&nbsp;</label>
+    <input #inputName type="text" placeholder="Enter the Name"><br><br>
+    <label for="">Location:&nbsp;&nbsp;</label>
+    <input #inputLocation type="text" placeholder="Enter the Location"><br><br>
+    <label for="">Email:&nbsp;&nbsp;</label>
+    <input #inputEmail type="text" placeholder="Enter the Email"><br><br>
+    <label for="">Age:&nbsp;&nbsp;</label>
+    <input #inputAge type="text" placeholder="Enter the Age"><br><br>
+    <label for="">Contact:&nbsp;&nbsp;</label>
+    <input #inputContact type="text" placeholder="Enter the Contact"><br><br>
+    <button (click)="onSend(inputName.value, inputLocation.value, inputEmail.value, inputAge.value, inputContact.value)">Send</button>
+</div>
+
+<hr>
+
+<table border="1px">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Contact</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let item of posts">
+            <td>{{ item.name }}</td>
+            <td>{{ item.location }}</td>
+            <td>{{ item.email }}</td>
+            <td>{{ item.age }}</td>
+            <td>{{ item.contact }}</td>
+        </tr>
+    </tbody>
+</table>
